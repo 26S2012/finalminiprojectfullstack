@@ -139,5 +139,5 @@ const Cart = () => {
     </div>
   );
 };
-export { calculateTotal };
+
 export default Cart;
