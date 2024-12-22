@@ -31,6 +31,9 @@ const ListProducts = () => {
 
   return (
     <Container className="my-5">
+      <button style={{ backgroundColor: '#4A5A3A', color: 'white' }} onClick={() => navigate(-1)}>
+          ←
+        </button> 
       <div className="p-4 border rounded shadow bg-light">
         <h2 className="text-center mb-4">List of Products</h2>
         <Row className="gy-4">

@@ -69,7 +69,7 @@ const Cart = () => {
     dispatch(decreaseQuantity({ email: user.email, productId }));
   };
 
-  const calculateTotal = () => {
+   const calculateTotal = () => {
     return items.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
   };
 
@@ -80,6 +80,7 @@ const Cart = () => {
         <p>Your cart is empty. Add some products!</p>
       ) : (
         <div>
+          
           <table className="table table-bordered" style={{ marginTop: "20px" }}>
             <thead className="thead-dark">
               <tr>
@@ -138,5 +139,5 @@ const Cart = () => {
     </div>
   );
 };
-
+export { calculateTotal };
 export default Cart;

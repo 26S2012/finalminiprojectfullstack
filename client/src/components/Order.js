@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Order = () => {
   const [orders, setOrders] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Fetch the orders from the backend
@@ -20,6 +22,9 @@ const Order = () => {
 
   return (
     <div style={styles.pageContainer}>
+      <button style={{ backgroundColor: '#4A5A3A', color: 'white' }} onClick={() => navigate(-1)}>
+          ←
+        </button> 
       <h2>All Orders</h2>
       <div style={styles.orderCardsContainer}>
         {orders.map((order) => (

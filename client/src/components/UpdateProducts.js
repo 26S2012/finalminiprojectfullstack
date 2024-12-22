@@ -63,7 +63,9 @@ const UpdateProduct = () => {
         backgroundColor: '#f9f9f9',
       }}
     >
-      <h2 className="mb-4">Update Product</h2>
+      <h2 className="mb-4"><button style={{ backgroundColor: '#4A5A3A', color: 'white' }} onClick={() => navigate(-1)}>
+          ←
+        </button>Update Product</h2>
       <form onSubmit={handleUpdate}>
         <Row className="form-row">
           <Col md={12}>

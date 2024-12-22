@@ -69,6 +69,9 @@ const Address = () => {
 
   return (
     <Container className="my-5">
+      <button style={{ backgroundColor: '#4A5A3A', color: 'white' }} onClick={() => navigate(-1)}>
+          ←
+        </button>
       <Card className="p-3">
         <Row className="mb-4">
           <Col>

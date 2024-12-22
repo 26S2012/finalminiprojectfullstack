@@ -5,11 +5,14 @@ import { addProduct } from '../Features/ProductSlice';
 import { ProductsSchemaValidation } from '../Validations/ProductsValidation';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useNavigate } from 'react-router-dom';
+
 
 const AddProduct = () => {
   const [image, setImage] = useState(null);
   const dispatch = useDispatch();
   const { isSuccess, isError, isLoading, msg } = useSelector((state) => state.product);
+  const navigate = useNavigate();
   const { register, handleSubmit, formState:
     { errors }, reset } = useForm({
    resolver: yupResolver(ProductsSchemaValidation),
@@ -52,7 +55,10 @@ const AddProduct = () => {
         borderRadius: '5px',
       }}
     >
-      <h2 className="mb-4">Owner</h2>
+       
+      <h2 className="mb-4"><button style={{ backgroundColor: '#4A5A3A', color: 'white' }} onClick={() => navigate(-1)}>
+          ←
+        </button>Owner</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Row className="form-row">
           <Col md={12}>
